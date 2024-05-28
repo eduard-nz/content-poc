@@ -9,7 +9,7 @@ export const pathway: Collection = {
     include: '**/*',
   },
   ui: {
-    router: (props) => props.document._sys.filename,
+    router: (props) => props.document._sys.breadcrumbs.join('/'),
     filename: {
       readonly: true,
       slugify: (values: Record<string, any>) => {
