@@ -1,7 +1,7 @@
 'use client';
 
 import { cn, withProps } from '@udecode/cn';
-import { createPlugins, Plate, RenderAfterEditable, PlateLeaf } from '@udecode/plate-common';
+import { createPlugins, Plate, RenderAfterEditable, PlateLeaf, Value } from '@udecode/plate-common';
 import { createParagraphPlugin, ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
 import {
   createHeadingPlugin,
@@ -84,7 +84,7 @@ import { FixedToolbarButtons } from '@/components/plate-ui/fixed-toolbar-buttons
 import { FloatingToolbar } from '@/components/plate-ui/floating-toolbar';
 import { FloatingToolbarButtons } from '@/components/plate-ui/floating-toolbar-buttons';
 import { withPlaceholders } from '@/components/plate-ui/placeholder';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const plugins = createPlugins(
   [
@@ -267,8 +267,16 @@ const initialValue = [
 
 export function PlateEditor() {
   const containerRef = useRef(null);
+  const [debugValue, setDebugValue] = useState<Value>(initialValue);
+
   return (
-    <Plate plugins={plugins} initialValue={initialValue}>
+    <Plate
+      plugins={plugins}
+      initialValue={initialValue}
+      onChange={(newValue) => {
+        setDebugValue(newValue);
+      }}
+    >
       <div
         ref={containerRef}
         className={cn(
@@ -287,6 +295,7 @@ export function PlateEditor() {
           <FloatingToolbarButtons />
         </FloatingToolbar>
       </div>
+      <div>{JSON.stringify(debugValue)}</div>
     </Plate>
   );
 }
