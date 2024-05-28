@@ -16,6 +16,14 @@ import { MarkToolbarButton } from './mark-toolbar-button';
 import { ModeDropdownMenu } from './mode-dropdown-menu';
 import { ToolbarGroup } from './toolbar';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
+import { IndentListToolbarButton } from './indent-list-toolbar-button';
+import { ListStyleType } from '@udecode/plate-indent-list';
+import { IndentToolbarButton } from './indent-toolbar-button';
+import { OutdentToolbarButton } from './outdent-toolbar-button';
+import { LinkToolbarButton } from './link-toolbar-button';
+import { TableDropdownMenu } from './table-dropdown-menu';
+import { MediaToolbarButton } from './media-toolbar-button';
+import { AlignDropdownMenu } from './align-dropdown-menu';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -31,7 +39,7 @@ export function FixedToolbarButtons() {
         {!readOnly && (
           <>
             <ToolbarGroup noSeparator>
-              <InsertDropdownMenu />
+              {/* <InsertDropdownMenu /> */}
               <TurnIntoDropdownMenu />
             </ToolbarGroup>
 
@@ -42,22 +50,29 @@ export function FixedToolbarButtons() {
               <MarkToolbarButton nodeType={MARK_ITALIC} tooltip="Italic (⌘+I)">
                 <Icons.italic />
               </MarkToolbarButton>
-              <MarkToolbarButton
-                nodeType={MARK_UNDERLINE}
-                tooltip="Underline (⌘+U)"
-              >
+              <MarkToolbarButton nodeType={MARK_UNDERLINE} tooltip="Underline (⌘+U)">
                 <Icons.underline />
               </MarkToolbarButton>
-
-              <MarkToolbarButton
-                nodeType={MARK_STRIKETHROUGH}
-                tooltip="Strikethrough (⌘+⇧+M)"
-              >
+              <MarkToolbarButton nodeType={MARK_STRIKETHROUGH} tooltip="Strikethrough (⌘+⇧+M)">
                 <Icons.strikethrough />
               </MarkToolbarButton>
-              <MarkToolbarButton nodeType={MARK_CODE} tooltip="Code (⌘+E)">
+              {/* <MarkToolbarButton nodeType={MARK_CODE} tooltip="Code (⌘+E)">
                 <Icons.code />
-              </MarkToolbarButton>
+              </MarkToolbarButton> */}
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <AlignDropdownMenu />
+              <IndentListToolbarButton nodeType={ListStyleType.Disc} />
+              <IndentListToolbarButton nodeType={ListStyleType.Decimal} />
+              <OutdentToolbarButton />
+              <IndentToolbarButton />
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <LinkToolbarButton />
+              <TableDropdownMenu />
+              <MediaToolbarButton />
             </ToolbarGroup>
           </>
         )}

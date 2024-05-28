@@ -30,21 +30,15 @@ export function FloatingToolbarButtons() {
           <MarkToolbarButton nodeType={MARK_ITALIC} tooltip="Italic (⌘+I)">
             <Icons.italic />
           </MarkToolbarButton>
-          <MarkToolbarButton
-            nodeType={MARK_UNDERLINE}
-            tooltip="Underline (⌘+U)"
-          >
+          <MarkToolbarButton nodeType={MARK_UNDERLINE} tooltip="Underline (⌘+U)">
             <Icons.underline />
           </MarkToolbarButton>
-          <MarkToolbarButton
-            nodeType={MARK_STRIKETHROUGH}
-            tooltip="Strikethrough (⌘+⇧+M)"
-          >
+          <MarkToolbarButton nodeType={MARK_STRIKETHROUGH} tooltip="Strikethrough (⌘+⇧+M)">
             <Icons.strikethrough />
           </MarkToolbarButton>
-          <MarkToolbarButton nodeType={MARK_CODE} tooltip="Code (⌘+E)">
+          {/* <MarkToolbarButton nodeType={MARK_CODE} tooltip="Code (⌘+E)">
             <Icons.code />
-          </MarkToolbarButton>
+          </MarkToolbarButton> */}
         </>
       )}
 
