@@ -18,11 +18,34 @@ export function PathwayPageComponent(props: {
 
   return (
     <>
-      <h1>{pathway.name}</h1>
-      <p style={{ fontSize: '10px', color: 'blue' }}>{pathway.audience}</p>
-      <h2 style={{ marginTop: '30px' }}>Assessment</h2>
-      <div style={{ marginTop: '10px', marginLeft: '20px' }}>
-        <TinaMarkdown content={pathway.assessment} />
+      <h1 className="text-3xl">{pathway.name}</h1>
+      <p className="text-sm text-blue-400">{pathway.audience}</p>
+      {/* {pathway.redFlags && ( */}
+      <div className="mt-4 border-l-2 border-gray-500 bg-gray-300 p-4 text-sm">
+        <p className="text-gray-700">Red flags</p>
+        <div className="text-red-700">
+          <p className="mt-3">{pathway.redFlags?.intro}</p>
+          <ul className="list-disc pl-5">
+            {pathway.redFlags?.flags.map((flag, index) => (
+              <li key={index} className="mt-1">
+                {flag}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* )} */}
+
+      <h2 className="mt-10 text-2xl">Assessment</h2>
+      <div className="mt-3">
+        <TinaMarkdown
+          content={pathway.assessment}
+          components={{
+            ol: (props) => <ol className="list-decimal pl-5" {...props} />,
+            ul: (props) => <ul className="list-disc pl-5" {...props} />,
+            li: (props) => <li className="mt-1" {...props} />,
+          }}
+        />
       </div>
     </>
   );

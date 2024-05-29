@@ -29,6 +29,7 @@ export const page: Collection = {
       name: 'heroImage',
       label: 'Hero Image',
       type: 'image',
+      required: true,
     },
     {
       name: 'news',

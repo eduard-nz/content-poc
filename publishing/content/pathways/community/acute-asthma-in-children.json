@@ -1,6 +1,14 @@
 {
   "name": "Acute Asthma in Children",
   "audience": "community",
-  "redFlags": "Signs of life‑threatening asthma:\n\n* Unable to speak, or able to speak only single words\n* Silent chest, cyanosis, poor respiratory effort\n* Hypotension, exhaustion, drowsiness, confusion, coma\n* Deterioration despite maximal therapy\n",
+  "redFlags": {
+    "intro": "Signs of life‑threatening asthma:",
+    "flags": [
+      "Hypotension, exhaustion, drowsiness, confusion, coma",
+      "Silent chest, cyanosis, poor respiratory effort",
+      "Unable to speak, or able to speak only single words",
+      "Deterioration despite maximal therapy"
+    ]
+  },
   "assessment": "1. Take a **brief** history and perform rapid examination.\n2. Decide if asthma is the most likely diagnosis. Consider:\n   * the likelihood of acute asthma.\n   * alternative diagnoses.\n3. Look for signs of life-threatening asthma.\n   * If present, proceed to Management immediately.\n   * If absent, decide on the severity of the asthma – mild, moderate, or severe. Wheeze is not a good indicator of severity. If moderate or severe, measure oxygen saturation.\n4. Check and record the child's:\n   * risk of exposure to smoking.\n   * most recent influenza vaccine.\n   * height and weight.\n"
 }

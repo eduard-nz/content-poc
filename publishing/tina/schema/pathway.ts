@@ -37,7 +37,21 @@ export const pathway: Collection = {
     {
       name: 'redFlags',
       label: 'Red Flags',
-      type: 'rich-text',
+      type: 'object',
+      fields: [
+        {
+          name: 'intro',
+          label: 'Intro text',
+          type: 'string',
+        },
+        {
+          name: 'flags',
+          label: 'Red flags',
+          type: 'string',
+          list: true,
+          required: true,
+        },
+      ],
     },
     {
       name: 'assessment',

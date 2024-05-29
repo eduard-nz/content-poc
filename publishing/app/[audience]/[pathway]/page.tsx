@@ -6,6 +6,9 @@ export default async function PathwayPage({ params }: { params: { audience: stri
     relativePath: `${params.audience}/${params.pathway}.json`,
   });
 
+  const data = JSON.parse(JSON.stringify(res.data));
+  console.log(JSON.stringify(data.pathway));
+
   return (
     <PathwayPageComponent
       data={JSON.parse(JSON.stringify(res.data))}
