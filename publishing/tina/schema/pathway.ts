@@ -1,4 +1,5 @@
 import { Collection } from 'tinacms';
+import { audienceField } from './audience-field';
 
 export const pathway: Collection = {
   label: 'Pathway',
@@ -26,13 +27,7 @@ export const pathway: Collection = {
       isTitle: true,
       required: true,
     },
-    {
-      name: 'audience',
-      label: 'Audience',
-      type: 'string',
-      options: ['community', 'hospital'],
-      required: true,
-    },
+    audienceField,
     {
       name: 'relatedPathways',
       label: 'See also',
