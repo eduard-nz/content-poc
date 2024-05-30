@@ -7,7 +7,7 @@ export default async function PathwayPage({ params }: { params: { audience: stri
   });
 
   const data = JSON.parse(JSON.stringify(res.data));
-  console.log(JSON.stringify(data.pathway));
+  console.log('Red flags:', JSON.stringify(data.pathway.redFlags));
 
   return (
     <PathwayPageComponent
