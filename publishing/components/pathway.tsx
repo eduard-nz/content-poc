@@ -19,14 +19,14 @@ export function PathwayPageComponent(props: {
 
   return (
     <>
-      <h1 className="text-3xl">{pathway.name}</h1>
+      <h1 className="text-3xl" data-tina-field={tinaField(pathway, 'name')}>
+        {pathway.name}
+      </h1>
       <p className="text-sm text-blue-400">{pathway.audience}</p>
-      {pathway.redFlags && (
-        <RedFlagComponent intro={pathway.redFlags?.intro} flags={pathway.redFlags?.flags} />
-      )}
+      <RedFlagComponent redFlags={pathway.redFlags} />
       <div className="mb-6 mt-6 border-t-2 border-gray-400" />
       <h2 className="text-2xl">Assessment</h2>
-      <div className="mt-3">
+      <div className="mt-3" data-tina-field={tinaField(pathway, 'assessment')}>
         <TinaMarkdown
           content={pathway.assessment}
           components={{
