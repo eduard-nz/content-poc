@@ -5,6 +5,7 @@ import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import React from 'react';
+import RedFlagComponent from './red-flags';
 
 export function PathwayPageComponent(props: {
   data: PathwayQuery;
@@ -21,22 +22,10 @@ export function PathwayPageComponent(props: {
       <h1 className="text-3xl">{pathway.name}</h1>
       <p className="text-sm text-blue-400">{pathway.audience}</p>
       {pathway.redFlags && (
-        <div className="mt-4 border-l-2 border-gray-500 bg-gray-300 p-4 text-sm">
-          <p className="text-gray-700">Red flags</p>
-          <div className="text-red-700">
-            <p className="mt-3">{pathway.redFlags?.intro}</p>
-            <ul className="list-disc pl-5">
-              {pathway.redFlags?.flags.map((flag, index) => (
-                <li key={index} className="mt-1">
-                  {flag}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RedFlagComponent intro={pathway.redFlags?.intro} flags={pathway.redFlags?.flags} />
       )}
-
-      <h2 className="mt-10 text-2xl">Assessment</h2>
+      <div className="mb-6 mt-6 border-t-2 border-gray-400" />
+      <h2 className="text-2xl">Assessment</h2>
       <div className="mt-3">
         <TinaMarkdown
           content={pathway.assessment}
