@@ -24,6 +24,7 @@ import { LinkToolbarButton } from './link-toolbar-button';
 import { TableDropdownMenu } from './table-dropdown-menu';
 import { MediaToolbarButton } from './media-toolbar-button';
 import { AlignDropdownMenu } from './align-dropdown-menu';
+import { ToggleToolbarButton } from './toggle-toolbar-button';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -56,9 +57,6 @@ export function FixedToolbarButtons() {
               <MarkToolbarButton nodeType={MARK_STRIKETHROUGH} tooltip="Strikethrough (⌘+⇧+M)">
                 <Icons.strikethrough />
               </MarkToolbarButton>
-              {/* <MarkToolbarButton nodeType={MARK_CODE} tooltip="Code (⌘+E)">
-                <Icons.code />
-              </MarkToolbarButton> */}
             </ToolbarGroup>
 
             <ToolbarGroup>
@@ -67,6 +65,7 @@ export function FixedToolbarButtons() {
               <IndentListToolbarButton nodeType={ListStyleType.Decimal} />
               <OutdentToolbarButton />
               <IndentToolbarButton />
+              <ToggleToolbarButton />
             </ToolbarGroup>
 
             <ToolbarGroup>

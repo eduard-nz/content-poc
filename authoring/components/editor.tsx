@@ -84,6 +84,8 @@ import { FixedToolbarButtons } from '@/components/plate-ui/fixed-toolbar-buttons
 import { FloatingToolbar } from '@/components/plate-ui/floating-toolbar';
 import { FloatingToolbarButtons } from '@/components/plate-ui/floating-toolbar-buttons';
 import { withPlaceholders } from '@/components/plate-ui/placeholder';
+import { createNodeIdPlugin } from '@udecode/plate-node-id';
+import { createTogglePlugin, ELEMENT_TOGGLE } from '@udecode/plate-toggle';
 import { useRef, useState } from 'react';
 
 const plugins = createPlugins(
@@ -133,6 +135,7 @@ const plugins = createPlugins(
         props: {
           validTypes: [
             ELEMENT_PARAGRAPH,
+            ELEMENT_TOGGLE,
             // ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_BLOCKQUOTE, ELEMENT_CODE_BLOCK
           ],
         },
@@ -219,6 +222,8 @@ const plugins = createPlugins(
     createTrailingBlockPlugin({
       options: { type: ELEMENT_PARAGRAPH },
     }),
+    createNodeIdPlugin(),
+    createTogglePlugin(),
     createDeserializeDocxPlugin(),
     createDeserializeCsvPlugin(),
     createDeserializeMdPlugin(),
