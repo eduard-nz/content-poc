@@ -3,7 +3,7 @@ import client from '@/tina/__generated__/client';
 
 export default async function PathwayPage({ params }: { params: { audience: string; pathway: string } }) {
   const res = await client.queries.pathway({
-    relativePath: `${params.audience}/${params.pathway}.json`,
+    relativePath: `${params.audience}/${params.pathway}.mdx`,
   });
 
   const data = JSON.parse(JSON.stringify(res.data));
