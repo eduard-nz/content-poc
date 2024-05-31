@@ -55,13 +55,13 @@ export function PathwayPageComponent(props: {
       <p className="text-sm text-blue-400">{pathway.audience}</p>
 
       {pathway.relatedPathways && (
-        <p className="mb-6 mt-8 text-sm">
+        <p className="mb-6 mt-8 text-sm" data-tina-field={tinaField(pathway, 'relatedPathways')}>
           <span className="font-semibold">See also:</span>{' '}
           {pathway.relatedPathways.map((link, index) => {
             return (
               <Link
                 key={index}
-                href={link!.pathway!._sys.relativePath}
+                href={`/${link!.pathway!._sys.breadcrumbs.join('/')}`}
                 className="text-blue-500 hover:underline"
               >
                 {link?.pathway?.name}
