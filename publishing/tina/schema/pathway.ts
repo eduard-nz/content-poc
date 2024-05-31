@@ -33,6 +33,12 @@ export const pathway: Collection = {
       label: 'See also',
       type: 'object',
       list: true,
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.pathway.name };
+        },
+      },
       fields: [
         {
           name: 'pathway',

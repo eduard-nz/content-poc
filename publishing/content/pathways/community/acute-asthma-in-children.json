@@ -1,6 +1,11 @@
 {
   "name": "Acute Asthma in Children",
   "audience": "community",
+  "relatedPathways": [
+    {
+      "pathway": "content/pathways/community/acute-asthma-in-adults-and-youth.json"
+    }
+  ],
   "redFlags": {
     "intro": "Signs of life‑threatening asthma:",
     "flags": [

@@ -6,6 +6,7 @@ import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 import React from 'react';
 import RedFlagComponent from './red-flags';
+import Link from 'next/link';
 
 export function PathwayPageComponent(props: {
   data: PathwayQuery;
@@ -27,6 +28,7 @@ export function PathwayPageComponent(props: {
         `}
       </style>
 
+      {/* <!-- Quick Links --> */}
       <div className="fixed right-0 top-0 z-50 mr-4 mt-4 rounded-lg bg-gray-600 p-4 shadow-lg">
         <ul>
           <li>
@@ -52,6 +54,22 @@ export function PathwayPageComponent(props: {
       </h1>
       <p className="text-sm text-blue-400">{pathway.audience}</p>
 
+      {pathway.relatedPathways && (
+        <p className="mb-6 mt-8 text-sm">
+          <span className="font-semibold">See also:</span>{' '}
+          {pathway.relatedPathways.map((link, index) => {
+            return (
+              <Link
+                key={index}
+                href={link!.pathway!._sys.relativePath}
+                className="text-blue-500 hover:underline"
+              >
+                {link?.pathway?.name}
+              </Link>
+            );
+          })}
+        </p>
+      )}
       <RedFlagComponent redFlags={pathway.redFlags} />
 
       <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
