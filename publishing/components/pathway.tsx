@@ -19,6 +19,34 @@ export function PathwayPageComponent(props: {
 
   return (
     <>
+      <style>
+        {`
+          html {
+            scroll-behavior: smooth;
+          }
+        `}
+      </style>
+
+      <div className="fixed right-0 top-0 z-50 mr-4 mt-4 rounded-lg bg-gray-600 p-4 shadow-lg">
+        <ul>
+          <li>
+            <a href="#assessment" className="text-white hover:text-blue-700">
+              Assessment
+            </a>
+          </li>
+          <li>
+            <a href="#management" className="text-white hover:text-blue-700">
+              Management
+            </a>
+          </li>
+          <li>
+            <a href="#request" className="text-white hover:text-blue-700">
+              Request
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <h1 className="text-3xl" data-tina-field={tinaField(pathway, 'name')}>
         {pathway.name}
       </h1>
@@ -28,7 +56,9 @@ export function PathwayPageComponent(props: {
 
       <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
 
-      <h2 className="text-2xl">Assessment</h2>
+      <h2 id="assessment" className="text-2xl">
+        Assessment
+      </h2>
       <div className="mt-3" data-tina-field={tinaField(pathway, 'assessment')}>
         <TinaMarkdown
           content={pathway.assessment}
@@ -42,7 +72,9 @@ export function PathwayPageComponent(props: {
 
       <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
 
-      <h2 className="text-2xl">Management</h2>
+      <h2 id="management" className="text-2xl">
+        Management
+      </h2>
       <div className="mt-3" data-tina-field={tinaField(pathway, 'management')}>
         <TinaMarkdown
           content={pathway.management}
@@ -56,7 +88,9 @@ export function PathwayPageComponent(props: {
 
       <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
 
-      <h2 className="text-2xl">Request</h2>
+      <h2 id="request" className="text-2xl">
+        Request
+      </h2>
       <div className="mt-3" data-tina-field={tinaField(pathway, 'request')}>
         <TinaMarkdown
           content={pathway.request}
