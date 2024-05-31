@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex h-screen bg-gray-100">
+      <body className={`${inter.className} bg-gray-100`}>
+        <div className="flex h-screen">
           {/* <!-- Sidebar --> */}
           <div className="bg-white-800 absolute inset-y-0 left-0 w-64 -translate-x-full transform space-y-6 border-r-2 px-2 py-7 text-black transition duration-200 ease-in-out md:relative md:translate-x-0">
             {/* <!-- Logo or Brand --> */}

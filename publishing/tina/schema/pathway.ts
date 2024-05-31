@@ -31,8 +31,22 @@ export const pathway: Collection = {
     {
       name: 'relatedPathways',
       label: 'See also',
-      type: 'reference',
-      collections: ['pathway'],
+      type: 'object',
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.pathway.name };
+        },
+      },
+      fields: [
+        {
+          name: 'pathway',
+          label: 'Pathway',
+          type: 'reference',
+          collections: ['pathway'],
+        },
+      ],
     },
     {
       name: 'redFlags',
@@ -76,6 +90,33 @@ export const pathway: Collection = {
               required: true,
             },
           ],
+        },
+      ],
+    },
+    {
+      name: 'management',
+      label: 'Management',
+      type: 'rich-text',
+    },
+    {
+      name: 'request',
+      label: 'Request',
+      type: 'rich-text',
+    },
+    {
+      name: 'info',
+      label: 'Information',
+      type: 'object',
+      fields: [
+        {
+          name: 'healthProfessionals',
+          label: 'For Health Professionals',
+          type: 'rich-text',
+        },
+        {
+          name: 'patients',
+          label: 'For Patients',
+          type: 'rich-text',
         },
       ],
     },
