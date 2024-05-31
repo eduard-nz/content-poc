@@ -15,7 +15,7 @@ export const pathway: Collection = {
       readonly: true,
       slugify: (values: Record<string, any>) => {
         // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
-        return `/${values?.audience || 'community'}.${values?.name?.toLowerCase().replace(/ /g, '-')}`;
+        return `/${values?.audience || 'community'}/${values?.name?.toLowerCase().replace(/ /g, '-')}`;
       },
     },
   },
