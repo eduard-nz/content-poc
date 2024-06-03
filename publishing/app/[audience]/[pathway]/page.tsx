@@ -6,7 +6,7 @@ export default async function PathwayPage({ params }: { params: { audience: stri
     relativePath: `${params.audience}/${params.pathway}.mdx`,
   });
 
-  const data = JSON.parse(JSON.stringify(res.data));
+  // const data = JSON.parse(JSON.stringify(res.data));
   // console.log('Red flags:', JSON.stringify(data.pathway.redFlags));
 
   return (

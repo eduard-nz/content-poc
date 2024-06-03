@@ -97,6 +97,27 @@ export const pathway: Collection = {
       name: 'management',
       label: 'Management',
       type: 'rich-text',
+      templates: [
+        {
+          name: 'dropBox',
+          label: 'DropBox',
+          inline: true,
+          fields: [
+            {
+              name: 'title',
+              label: 'Short Description',
+              type: 'string',
+              required: true,
+            },
+            {
+              name: 'children',
+              label: 'Expanded Information',
+              type: 'rich-text',
+              required: true,
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'request',
@@ -117,6 +138,39 @@ export const pathway: Collection = {
           name: 'patients',
           label: 'For Patients',
           type: 'rich-text',
+        },
+      ],
+    },
+    {
+      name: 'metaData',
+      label: 'Meta Data',
+      type: 'object',
+      fields: [
+        {
+          name: 'contributors',
+          label: 'Contributors',
+          type: 'string',
+          list: true,
+        },
+        {
+          name: 'sources',
+          label: 'Sources',
+          type: 'object',
+          list: true,
+          fields: [
+            {
+              name: 'displayText',
+              label: 'Display text',
+              type: 'string',
+              required: true,
+            },
+            {
+              name: 'url',
+              label: 'Url',
+              type: 'string',
+              required: true,
+            },
+          ],
         },
       ],
     },
