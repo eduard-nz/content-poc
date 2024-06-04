@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
-import { uniqueId } from 'lodash';
 
 export interface DropBoxProps {
   title: string;
@@ -13,7 +12,6 @@ export interface DropBoxProps {
 export const DropBox: React.FC<DropBoxProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [portalContainer, setPortalContainer] = useState<HTMLDivElement | null>(null);
-  const dropBoxId = uniqueId('dropbox-');
 
   useEffect(() => {
     const newDiv = document.createElement('div');
@@ -22,10 +20,10 @@ export const DropBox: React.FC<DropBoxProps> = (props) => {
 
   useEffect(() => {
     if (portalContainer) {
-      const currentElement = document.querySelector(`[data-dropbox='${dropBoxId}']`);
+      const currentElement = document.querySelector(`[data-dropbox='${props.title}']`);
       currentElement?.parentElement?.insertAdjacentElement('afterend', portalContainer);
     }
-  }, [portalContainer, dropBoxId]);
+  }, [portalContainer, props.title]);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -36,7 +34,7 @@ export const DropBox: React.FC<DropBoxProps> = (props) => {
       <span
         className="cursor-pointer items-center underline hover:text-blue-500"
         onClick={toggleAccordion}
-        data-dropbox={dropBoxId}
+        data-dropbox={props.title}
       >
         {props.title}
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} className="ml-1 mr-2" />
