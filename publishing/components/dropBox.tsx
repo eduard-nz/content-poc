@@ -3,10 +3,11 @@ import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import { renderComponents } from './renderComponents';
 
 export interface DropBoxProps {
   title: string;
-  children: any;
+  content: any;
 }
 
 export const DropBox: React.FC<DropBoxProps> = (props) => {
@@ -44,7 +45,7 @@ export const DropBox: React.FC<DropBoxProps> = (props) => {
         createPortal(
           <div className="mb-4 mt-4 border border-gray-100 shadow-md">
             <div className="border-l-4 border-gray-400 p-6">
-              <TinaMarkdown content={props.children} />
+              <TinaMarkdown content={props.content} components={renderComponents} />
             </div>
           </div>,
           portalContainer

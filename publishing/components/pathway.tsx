@@ -98,10 +98,10 @@ export function PathwayPageComponent(props: {
           <TinaMarkdown content={pathway.assessment} components={renderComponents} />
         </div>
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
-        <h2 id="management" className="text-2xl">
+        <h2 id="management" className="text-2xl" data-tina-field={tinaField(pathway, 'management')}>
           Management
         </h2>
-        <div className="mt-3" data-tina-field={tinaField(pathway, 'management')}>
+        <div className="mt-3">
           <TinaMarkdown content={pathway.management} components={renderComponents} />
         </div>
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />

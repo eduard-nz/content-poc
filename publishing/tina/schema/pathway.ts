@@ -84,7 +84,7 @@ export const pathway: Collection = {
               required: true,
             },
             {
-              name: 'children',
+              name: 'content',
               label: 'Expanded Information',
               type: 'rich-text',
               required: true,
@@ -110,7 +110,7 @@ export const pathway: Collection = {
               required: true,
             },
             {
-              name: 'children',
+              name: 'content',
               label: 'Expanded Information',
               type: 'rich-text',
               required: true,
