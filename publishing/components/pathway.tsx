@@ -11,7 +11,6 @@ import React, { useState } from 'react';
 import RedFlagComponent from './red-flags';
 import Link from 'next/link';
 import { renderComponents } from './renderComponents';
-import { DropBoxController } from './dropBox';
 
 export function PathwayPageComponent(props: {
   data: PathwayQuery;
@@ -63,8 +62,6 @@ export function PathwayPageComponent(props: {
           </ul>
 
           <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
-
-          <DropBoxController />
         </div>
       </div>
 

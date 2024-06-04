@@ -52,20 +52,3 @@ export const DropBox: React.FC<DropBoxProps> = (props) => {
     </>
   );
 };
-
-export const DropBoxController: React.FC = () => {
-  const [expandAll, setExpandAll] = useState(false);
-
-  const toggleAll = () => {
-    setExpandAll(!expandAll);
-    document.querySelectorAll('[data-dropbox-container]').forEach((element) => {
-      element.setAttribute('data-is-open', String(!expandAll));
-    });
-  };
-
-  return (
-    <button onClick={toggleAll} className="mb-4 rounded bg-blue-500 p-2 text-white">
-      {expandAll ? 'Collapse All' : 'Expand All'}
-    </button>
-  );
-};
