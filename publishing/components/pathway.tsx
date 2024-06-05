@@ -18,6 +18,7 @@ export function PathwayPageComponent(props: {
     relativePath: string;
   };
   query: string;
+  otherAudiences: PathwayQuery[];
 }) {
   const { data } = useTina(props);
   const { pathway } = data;
@@ -62,6 +63,24 @@ export function PathwayPageComponent(props: {
           </ul>
 
           <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
+
+          {props.otherAudiences.length && (
+            <>
+              <p className="mb-6 mt-6 font-semibold">Other audiences</p>
+              <ul>
+                {props.otherAudiences.map((audience, index) => (
+                  <li key={index}>
+                    <Link
+                      href={`/${audience.pathway._sys.breadcrumbs.join('/')}`}
+                      className="hover:text-blue-700"
+                    >
+                      {audience.pathway._sys.breadcrumbs[0]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
       </div>
 

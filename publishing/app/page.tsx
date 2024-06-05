@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import styles from './page.module.css';
 import client from '@/tina/__generated__/client';
 import { PageComponent } from '@/components/page';
 

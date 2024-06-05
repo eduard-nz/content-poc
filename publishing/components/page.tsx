@@ -16,7 +16,6 @@ export function PageComponent(props: {
   const { data } = useTina(props);
   const { page } = data;
 
-  console.log(page.heroImage);
   return (
     <>
       <div className="relative">
