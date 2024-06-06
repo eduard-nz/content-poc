@@ -91,6 +91,20 @@ export const pathway: Collection = {
             },
           ],
         },
+        {
+          name: 'textBlock',
+          label: 'Text Block',
+          inline: true,
+          fields: [
+            {
+              name: 'block',
+              label: 'Text Block',
+              type: 'reference',
+              collections: ['textBlock'],
+              required: true,
+            },
+          ],
+        },
       ],
     },
     {
@@ -113,6 +127,20 @@ export const pathway: Collection = {
               name: 'content',
               label: 'Expanded Information',
               type: 'rich-text',
+              required: true,
+            },
+          ],
+        },
+        {
+          name: 'textBlock',
+          label: 'Text Block',
+          inline: true,
+          fields: [
+            {
+              name: 'block',
+              label: 'Text Block',
+              type: 'reference',
+              collections: ['textBlock'],
               required: true,
             },
           ],
