@@ -1,13 +1,19 @@
+'use server';
+
 import { PathwayPageComponent } from '@/components/pathway';
 import client from '@/tina/__generated__/client';
-import { PathwayQuery } from '@/tina/__generated__/types';
+import { loadReferencedContent } from '@/utils/node-helpers';
 
 export default async function PathwayPage({ params }: { params: { audience: string; pathway: string } }) {
   const pathwayResponse = await client.queries.pathway({
     relativePath: `${params.audience}/${params.pathway}.mdx`,
   });
 
-  // TODO: refactor into settings somewhere
+  // This may well be solved with a sophisticated GraphQL query instead
+  await loadReferencedContent(pathwayResponse.data.pathway.assessment, 'textBlock', getTextBlockContent);
+  await loadReferencedContent(pathwayResponse.data.pathway.management, 'textBlock', getTextBlockContent);
+  
+  // TODO: find a place in settings somewhere to load from
   const audiences = ['community', 'hospital'];
   //TODO: Refactor into optimised query
   const otherAudiences = audiences
@@ -27,4 +33,13 @@ export default async function PathwayPage({ params }: { params: { audience: stri
       otherAudiences={audiencePathways}
     />
   );
+}
+
+async function getTextBlockContent(block: string) {
+  const response = await client.queries.textBlock({
+      relativePath: block.replace('content/text-blocks/', ''),
+    });
+
+  // This function should return the content object based on the block value
+  return { content: response.data.textBlock.content };
 }

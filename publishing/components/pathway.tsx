@@ -3,7 +3,6 @@
 import { PathwayQuery } from '@/tina/__generated__/types';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
-import { useEditState } from 'tinacms/dist/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +22,6 @@ export function PathwayPageComponent(props: {
   const { data } = useTina(props);
   const { pathway } = data;
 
-  const { edit } = useEditState();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
@@ -124,10 +122,10 @@ export function PathwayPageComponent(props: {
           <TinaMarkdown content={pathway.management} components={renderComponents} />
         </div>
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
-        <h2 id="request" className="text-2xl">
+        <h2 id="request" className="text-2xl" data-tina-field={tinaField(pathway, 'request')}>
           Request
         </h2>
-        <div className="mt-3" data-tina-field={tinaField(pathway, 'request')}>
+        <div className="mt-3">
           <TinaMarkdown content={pathway.request} components={renderComponents} />
         </div>
       </div>

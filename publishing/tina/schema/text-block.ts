@@ -14,10 +14,11 @@ export const textBlock: Collection = {
       required: true,
     },
     {
-        name: 'children',
+        name: 'content',
         label: 'Content',
         type: 'rich-text',
         required: true,
+        isBody: true
       },
   ],
 };

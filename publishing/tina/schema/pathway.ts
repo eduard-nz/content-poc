@@ -84,7 +84,7 @@ export const pathway: Collection = {
               required: true,
             },
             {
-              name: 'content',
+              name: 'children',
               label: 'Expanded Information',
               type: 'rich-text',
               required: true,
@@ -124,11 +124,47 @@ export const pathway: Collection = {
               required: true,
             },
             {
-              name: 'content',
+              name: 'children',
               label: 'Expanded Information',
               type: 'rich-text',
               required: true,
-            },
+              isBody: true,
+              templates: [
+                {
+                  name: 'dropBox',
+                  label: 'DropBox',
+                  inline: true,
+                  fields: [
+                    {
+                      name: 'title',
+                      label: 'Short Description',
+                      type: 'string',
+                      required: true,
+                    },
+                    {
+                      name: 'children',
+                      label: 'Expanded Information',
+                      type: 'rich-text',
+                      required: true,
+                    },
+                  ],
+                },
+                {
+                  name: 'textBlock',
+                  label: 'Text Block',
+                  inline: true,
+                  fields: [
+                    {
+                      name: 'block',
+                      label: 'Text Block',
+                      type: 'reference',
+                      collections: ['textBlock'],
+                      required: true,
+                    },
+                  ],
+                },
+              ],
+                    },
           ],
         },
         {
@@ -141,6 +177,19 @@ export const pathway: Collection = {
               label: 'Text Block',
               type: 'reference',
               collections: ['textBlock'],
+              required: true,
+            },
+          ],
+        },
+        {
+          name: 'practicePoint',
+          label: 'Practice Point',
+          inline: false,
+          fields: [
+            {
+              name: 'content',
+              label: 'Practice Point',
+              type: 'rich-text',
               required: true,
             },
           ],
