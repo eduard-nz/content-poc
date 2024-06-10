@@ -14,10 +14,10 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "tinacms": "^1.6.3"
+    "tinacms": "workspace:*"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.45",
+    "@tinacms/cli": "workspace:*",
     "@types/lodash": "^4.17.4",
     "@types/node": "^20.12.12",
     "@types/react": "^18",

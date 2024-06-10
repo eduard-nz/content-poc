@@ -1,3 +1,5 @@
 packages:
   - authoring
   - publishing
+  - 'packages/*'
+  - 'packages/@tinacms/*'
