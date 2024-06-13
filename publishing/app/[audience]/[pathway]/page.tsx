@@ -6,7 +6,7 @@ import { loadReferencedContent } from '@/utils/node-helpers';
 
 export default async function PathwayPage({ params }: { params: { audience: string; pathway: string } }) {
   const pathwayResponse = await client.queries.pathway({
-    relativePath: `${params.audience}/${params.pathway}.mdx`,
+    relativePath: `${params.audience}/${params.pathway}.json`,
   });
 
   // This may well be solved with a sophisticated GraphQL query instead
@@ -16,14 +16,14 @@ export default async function PathwayPage({ params }: { params: { audience: stri
   // TODO: find a place in settings somewhere to load from
   const audiences = ['community', 'hospital'];
   //TODO: Refactor into optimised query
-  const otherAudiences = audiences
-    .filter((audience) => audience !== params.audience)
-    .map(async (audience) => {
-      const response = await client.queries.pathway({ relativePath: `${audience}/${params.pathway}.mdx` });
-      return response.data;
-    });
+  // const otherAudiences = audiences
+  //   .filter((audience) => audience !== params.audience)
+  //   .map(async (audience) => {
+  //     const response = await client.queries.pathway({ relativePath: `${audience}/${params.pathway}.json` });
+  //     return response.data;
+  //   });
 
-  const audiencePathways = await Promise.all(otherAudiences);
+  const audiencePathways = []; //await Promise.all(otherAudiences);
 
   return (
     <PathwayPageComponent

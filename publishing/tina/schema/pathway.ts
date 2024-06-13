@@ -5,7 +5,7 @@ export const pathway: Collection = {
   label: 'Pathway',
   name: 'pathway',
   path: 'content/pathways',
-  format: 'mdx',
+  format: 'json',
   match: {
     include: '**/*',
   },

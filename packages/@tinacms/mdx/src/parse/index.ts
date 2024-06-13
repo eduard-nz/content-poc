@@ -108,6 +108,10 @@ export const parseMDX = (
   let tree: Root | null
   try {
     if (field.parser?.type === 'markdown') {
+      // console.log(`Parsing field ${field.name}\nType: ${typeof value}, value: `, value);
+      const json = JSON.parse(value);
+      // console.log(`Parsed field ${field.name}\nType: ${typeof json}, value: `, json);
+      return json;
       return parseMDXNext(value, field, imageCallback)
     }
     let preprocessedString = value

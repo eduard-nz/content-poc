@@ -46,7 +46,7 @@ export const stringifyFile = (
     extra['_template'] = _template;
   }
   const strippedContent = { ...rest, ...extra };
-  console.log('Format:', format, 'Stripped content:\n', JSON.stringify(strippedContent));
+  // console.log('Format:', format, 'Stripped content:\n', JSON.stringify(strippedContent));
   switch (format) {
     case '.markdown':
     case '.mdx':

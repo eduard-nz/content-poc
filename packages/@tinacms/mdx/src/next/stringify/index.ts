@@ -11,6 +11,7 @@ export const stringifyMDX = (
   if (!value) {
     return
   }
+  console.log('stringifying', JSON.stringify(value));
   const mdTree = preProcess(value, field, imageCallback)
   return toTinaMarkdown(mdTree, field)
 }
