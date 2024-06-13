@@ -43,9 +43,6 @@ export const stringifyMDX = (
   imageCallback: (url: string) => string
 ) => {
   if (field.parser?.type === 'markdown') {
-    // console.log(`Stringifying field ${field.name}\nType: ${typeof value}, value: `, value);
-    // return value;
-    return JSON.stringify(value);
     return stringifyMDXNext(value, field, imageCallback)
   }
   if (!value) {

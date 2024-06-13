@@ -9,7 +9,7 @@ export const parseMDX = (
   field: RichTextField,
   imageCallback?: (s: string) => string
 ) => {
-  console.log('parsing', value);
+  return JSON.parse(value);
   const backup = (v: string) => v
   const callback = imageCallback || backup
   const tree = fromMarkdown(value, field)
