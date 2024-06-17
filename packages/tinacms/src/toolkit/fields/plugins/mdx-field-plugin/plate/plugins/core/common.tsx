@@ -18,6 +18,10 @@ import {
   createItalicPlugin,
   createUnderlinePlugin,
   createCodePlugin,
+  createIndentPlugin,
+  ELEMENT_H1,
+  ELEMENT_PARAGRAPH,
+  createIndentListPlugin,
 } from '@udecode/plate-headless'
 import { ReactEditor } from 'slate-react'
 import {
@@ -33,15 +37,29 @@ import { HANDLES_MDX } from './formatting'
 export const plugins = [
   createHeadingPlugin(),
   createParagraphPlugin(),
-  createCodeBlockPlugin(),
+  // createCodeBlockPlugin(),
   createHTMLBlockPlugin(),
   createHTMLInlinePlugin(),
   createBlockquotePlugin(),
   createBoldPlugin(),
   createItalicPlugin(),
   createUnderlinePlugin(),
-  createCodePlugin(),
-  createListPlugin(),
+  // createCodePlugin(),
+  // createListPlugin(),
+  createIndentPlugin({
+    inject: {
+      props: {
+        validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
+      },
+    },
+  }),
+  createIndentListPlugin({
+    inject: {
+      props: {
+        validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
+      },
+    },
+  }),
   createHorizontalRulePlugin(),
   // Allows us to do things like copy/paste, remembering the state of the element (like mdx)
   createNodeIdPlugin(),

@@ -33,6 +33,7 @@ import type { MdxTemplate } from '../../../types'
 import { useEditorContext } from '../../../editor-context'
 import { insertEmptyCodeBlock } from '../../../transforms/insert-empty-block'
 import type { Form } from '@toolkit/forms'
+import { toggleIndentList } from '@udecode/plate-indent-list'
 
 const headers = [
   {
@@ -112,73 +113,6 @@ export function Toolbar({
     },
     {
       tinaForm,
-      name: 'link',
-      label: 'Link',
-      active: isLinkActive,
-    },
-    {
-      tinaForm,
-      name: 'image',
-      label: 'Image',
-      active: isImgActive,
-    },
-    {
-      tinaForm,
-      name: 'quote',
-      label: 'Quote',
-      active: blockQuoteActive,
-      onMouseDown: (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        toggleNodeType(editor, { activeType: ELEMENT_BLOCKQUOTE })
-      },
-    },
-    {
-      tinaForm,
-      name: 'ul',
-      label: 'Bullet List',
-      active: ulActive,
-      onMouseDown: (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        toggleList(editor, { type: ELEMENT_UL })
-      },
-    },
-    {
-      tinaForm,
-      name: 'ol',
-      label: 'List',
-      active: olActive,
-      onMouseDown: (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        toggleList(editor, { type: ELEMENT_OL })
-      },
-    },
-    {
-      tinaForm,
-      name: 'code',
-      label: 'Code',
-      active: isCodeActive,
-      onMouseDown: (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        toggleMark(editor, { key: MARK_CODE })
-      },
-    },
-    {
-      tinaForm,
-      name: 'codeBlock',
-      label: 'Code Block',
-      active: codeBlockActive,
-      onMouseDown: (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        insertEmptyCodeBlock(editor)
-      },
-    },
-    {
-      tinaForm,
       name: 'bold',
       label: 'Bold',
       active: isBoldActive,
@@ -199,6 +133,73 @@ export function Toolbar({
         toggleMark(editor, { key: MARK_ITALIC })
       },
     },
+    {
+      tinaForm,
+      name: 'link',
+      label: 'Link',
+      active: isLinkActive,
+    },
+    {
+      tinaForm,
+      name: 'ul',
+      label: 'Bullet List',
+      active: ulActive,
+      onMouseDown: (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        toggleIndentList(editor, {listStyleType: ELEMENT_UL })
+      },
+    },
+    {
+      tinaForm,
+      name: 'ol',
+      label: 'List',
+      active: olActive,
+      onMouseDown: (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        toggleIndentList(editor, { listStyleType: ELEMENT_OL })
+      },
+    },
+    {
+      tinaForm,
+      name: 'image',
+      label: 'Image',
+      active: isImgActive,
+    },
+    {
+      tinaForm,
+      name: 'quote',
+      label: 'Quote',
+      active: blockQuoteActive,
+      onMouseDown: (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        toggleNodeType(editor, { activeType: ELEMENT_BLOCKQUOTE })
+      },
+    },
+    // {
+    //   tinaForm,
+    //   name: 'code',
+    //   label: 'Code',
+    //   active: isCodeActive,
+    //   onMouseDown: (e) => {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     toggleMark(editor, { key: MARK_CODE })
+    //   },
+    // },
+    // {
+    //   tinaForm,
+    //   name: 'codeBlock',
+    //   label: 'Code Block',
+    //   active: codeBlockActive,
+    //   onMouseDown: (e) => {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     insertEmptyCodeBlock(editor)
+    //   },
+    // },
     {
       tinaForm,
       name: 'raw',

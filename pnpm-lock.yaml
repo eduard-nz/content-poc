@@ -1449,6 +1449,12 @@ importers:
       '@udecode/plate-headless':
         specifier: ^21.4.0
         version: 21.5.0(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react-dom@17.0.25)(@types/react@17.0.47)(jotai-optics@0.3.2)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-indent':
+        specifier: ^33.0.2
+        version: 33.0.2(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-indent-list':
+        specifier: ^33.0.3
+        version: 33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
       atob:
         specifier: 2.1.2
         version: 2.1.2
@@ -16408,6 +16414,27 @@ snapshots:
       - react-native
       - scheduler
 
+  '@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-core': 33.0.3(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-utils': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/react-utils': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@udecode/slate': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-react': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-utils': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/utils': 31.0.0
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react-native
+      - scheduler
+
   '@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
       '@udecode/plate-core': 33.0.3(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)
@@ -16459,6 +16486,36 @@ snapshots:
       - jotai-valtio
       - jotai-xstate
       - jotai-zustand
+      - react-native
+      - scheduler
+
+  '@udecode/plate-core@33.0.3(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/slate': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-react': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-utils': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/utils': 31.0.0
+      clsx: 1.2.1
+      is-hotkey: 0.2.0
+      jotai: 2.8.3(@types/react@17.0.47)(react@17.0.2)
+      jotai-optics: 0.3.2(jotai@2.8.3(@types/react@17.0.47)(react@17.0.2))(optics-ts@2.4.1)
+      jotai-x: 1.2.3(@types/react@17.0.47)(jotai@2.8.3(@types/react@17.0.47)(react@17.0.2))(react@17.0.2)
+      lodash: 4.17.21
+      nanoid: 3.3.7
+      optics-ts: 2.4.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      react-hotkeys-hook: 4.5.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+      use-deep-compare: 1.2.1(react@17.0.2)
+      zustand: 4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@17.0.2)
+      zustand-x: 3.0.3(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(zustand@4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@17.0.2))
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
       - react-native
       - scheduler
 
@@ -16811,6 +16868,19 @@ snapshots:
       - react-native
       - scheduler
 
+  '@udecode/plate-indent-list@33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-common': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-indent': 33.0.2(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-list': 33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      clsx: 1.2.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+
   '@udecode/plate-indent-list@33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
       '@udecode/plate-common': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)
@@ -16847,6 +16917,16 @@ snapshots:
       - jotai-zustand
       - react-native
       - scheduler
+
+  '@udecode/plate-indent@33.0.2(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-common': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
 
   '@udecode/plate-indent@33.0.2(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
@@ -17011,6 +17091,18 @@ snapshots:
       - jotai-zustand
       - react-native
       - scheduler
+
+  '@udecode/plate-list@33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-common': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/plate-reset-node': 33.0.0(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      lodash: 4.17.21
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
 
   '@udecode/plate-list@33.0.3(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
@@ -17216,6 +17308,16 @@ snapshots:
       - jotai-zustand
       - react-native
       - scheduler
+
+  '@udecode/plate-reset-node@33.0.0(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-common': 33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
 
   '@udecode/plate-reset-node@33.0.0(@udecode/plate-common@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
@@ -17619,6 +17721,28 @@ snapshots:
       - react-native
       - scheduler
 
+  '@udecode/plate-utils@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/plate-core': 33.0.3(@types/react@17.0.47)(immer@10.1.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/react-utils': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@udecode/slate': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-react': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)
+      '@udecode/slate-utils': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/utils': 31.0.0
+      clsx: 1.2.1
+      lodash: 4.17.21
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-hyperscript: 0.77.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react-native
+      - scheduler
+
   '@udecode/plate-utils@33.0.4(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
       '@udecode/plate-core': 33.0.3(@types/react@17.0.47)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.93.0(slate@0.94.1))(slate-hyperscript@0.77.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)
@@ -17640,6 +17764,16 @@ snapshots:
       - immer
       - react-native
       - scheduler
+
+  '@udecode/react-utils@33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
+    dependencies:
+      '@radix-ui/react-slot': 1.0.2(@types/react@17.0.47)(react@17.0.2)
+      '@udecode/utils': 31.0.0
+      clsx: 1.2.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@udecode/react-utils@33.0.0(@types/react@17.0.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -17684,6 +17818,19 @@ snapshots:
       slate: 0.94.1
       slate-history: 0.93.0(slate@0.94.1)
       slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+
+  '@udecode/slate-react@33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate-history@0.93.0(slate@0.94.1))(slate-react@0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1))(slate@0.94.1)':
+    dependencies:
+      '@udecode/react-utils': 33.0.0(@types/react@17.0.47)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      '@udecode/slate': 32.0.1(slate-history@0.93.0(slate@0.94.1))(slate@0.94.1)
+      '@udecode/utils': 31.0.0
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      slate: 0.94.1
+      slate-history: 0.93.0(slate@0.94.1)
+      slate-react: 0.97.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(slate@0.94.1)
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@udecode/slate-react@33.0.0(@types/react@17.0.47)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.93.0(slate@0.94.1))(slate-react@0.97.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.94.1))(slate@0.94.1)':
     dependencies:
@@ -21237,10 +21384,22 @@ snapshots:
 
   jose@4.15.5: {}
 
+  jotai-optics@0.3.2(jotai@2.8.3(@types/react@17.0.47)(react@17.0.2))(optics-ts@2.4.1):
+    dependencies:
+      jotai: 2.8.3(@types/react@17.0.47)(react@17.0.2)
+      optics-ts: 2.4.1
+
   jotai-optics@0.3.2(jotai@2.8.3(@types/react@17.0.47)(react@18.3.1))(optics-ts@2.4.1):
     dependencies:
       jotai: 2.8.3(@types/react@17.0.47)(react@18.3.1)
       optics-ts: 2.4.1
+
+  jotai-x@1.2.3(@types/react@17.0.47)(jotai@2.8.3(@types/react@17.0.47)(react@17.0.2))(react@17.0.2):
+    dependencies:
+      jotai: 2.8.3(@types/react@17.0.47)(react@17.0.2)
+    optionalDependencies:
+      '@types/react': 17.0.47
+      react: 17.0.2
 
   jotai-x@1.2.3(@types/react@17.0.47)(jotai@2.8.3(@types/react@17.0.47)(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -21256,6 +21415,11 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/template': 7.24.7
       jotai-optics: 0.3.2(jotai@2.8.3(@types/react@17.0.47)(react@18.3.1))(optics-ts@2.4.1)
+
+  jotai@2.8.3(@types/react@17.0.47)(react@17.0.2):
+    optionalDependencies:
+      '@types/react': 17.0.47
+      react: 17.0.2
 
   jotai@2.8.3(@types/react@17.0.47)(react@18.3.1):
     optionalDependencies:
@@ -25249,6 +25413,18 @@ snapshots:
 
   zod@3.23.8: {}
 
+  zustand-x@3.0.3(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)(zustand@4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@17.0.2)):
+    dependencies:
+      immer: 10.1.1
+      lodash.mapvalues: 4.6.0
+      react-tracked: 1.7.14(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(scheduler@0.19.0)
+      zustand: 4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@17.0.2)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - react-native
+      - scheduler
+
   zustand-x@3.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(zustand@4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@18.3.1)):
     dependencies:
       immer: 10.1.1
@@ -25263,6 +25439,14 @@ snapshots:
 
   zustand@3.7.2(react@17.0.2):
     optionalDependencies:
+      react: 17.0.2
+
+  zustand@4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@17.0.2):
+    dependencies:
+      use-sync-external-store: 1.2.0(react@17.0.2)
+    optionalDependencies:
+      '@types/react': 17.0.47
+      immer: 10.1.1
       react: 17.0.2
 
   zustand@4.5.2(@types/react@17.0.47)(immer@10.1.1)(react@18.3.1):
