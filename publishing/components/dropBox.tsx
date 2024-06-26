@@ -43,7 +43,7 @@ export const DropBox: React.FC<DropBoxProps> = (props) => {
       {isOpen &&
         portalContainer &&
         createPortal(
-          <div className="mb-4 mt-4 border border-gray-100 shadow-md">
+          <div className="mb-2 mt-2 border border-gray-100 shadow-md">
             <div className="border-l-4 border-gray-400 p-6">
               <TinaMarkdown content={props.content} components={renderComponents} />
             </div>

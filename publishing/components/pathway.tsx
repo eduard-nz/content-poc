@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import RedFlagComponent from './red-flags';
 import Link from 'next/link';
 import { renderComponents } from './renderComponents';
+import { DropBox } from './dropBox';
 
 export function PathwayPageComponent(props: {
   data: PathwayQuery;
@@ -106,27 +107,46 @@ export function PathwayPageComponent(props: {
             })}
           </p>
         )}
+        
         <RedFlagComponent redFlags={pathway.redFlags} />
+        
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
+        
         <h2 id="assessment" className="text-2xl" data-tina-field={tinaField(pathway, 'assessment')}>
           Assessment
         </h2>
         <div className="mt-3">
           <TinaMarkdown content={pathway.assessment} components={renderComponents} />
         </div>
+        
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
+        
         <h2 id="management" className="text-2xl" data-tina-field={tinaField(pathway, 'management')}>
           Management
         </h2>
         <div className="mt-3">
           <TinaMarkdown content={pathway.management} components={renderComponents} />
         </div>
+        
         <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
+
         <h2 id="request" className="text-2xl" data-tina-field={tinaField(pathway, 'request')}>
           Request
         </h2>
         <div className="mt-3">
           <TinaMarkdown content={pathway.request} components={renderComponents} />
+        </div>
+
+        <hr className="mb-6 mt-6 border-t-2 border-gray-400" />
+
+        <h2 id="information" className="text-2xl" data-tina-field={tinaField(pathway, 'info')}>
+          Information
+        </h2>
+        <div className="mt-3">
+          <DropBox title='For health professionals' content={pathway.info?.healthProfessionals}></DropBox>
+        </div>
+        <div className="mt-3">
+          <DropBox title='For patients' content={pathway.info?.patients}></DropBox>
         </div>
       </div>
     </>

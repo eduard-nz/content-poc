@@ -8,8 +8,8 @@ export const renderComponents: Components<{
   practicePoint: PracticePointProps;
   textBlock: TextBlockProps
 }> = {
-  ol: (props) => <ol className="mb-8 mt-8 list-decimal pl-5" {...props} />,
-  ul: (props) => <ul className="mb-8 mt-8 list-disc pl-5" {...props} />,
+  ol: (props) => <ol className="mb-2 mt-4 list-decimal pl-5" {...props} />,
+  ul: (props) => <ul className="mb-2 mt-2 list-disc pl-5" {...props} />,
   li: (props) => <li className="mt-1" {...props} />,
   p: (props) => <div className="mt-4" {...props} />,
   dropBox: (props: DropBoxProps) => <DropBox {...props} />,
