@@ -80,6 +80,8 @@
     "@tinacms/search": "workspace:*",
     "@tinacms/sharedctx": "workspace:*",
     "@udecode/plate-headless": "^21.4.0",
+    "@udecode/plate-indent": "^33.0.2",
+    "@udecode/plate-indent-list": "^33.0.3",
     "atob": "2.1.2",
     "color-string": "^1.5.3",
     "crypto-js": "^4.0.0",

@@ -35,6 +35,7 @@ export const RichEditor = (props: RichTextType) => {
           createInvalidMarkdownPlugin(),
           createLinkPlugin(),
           // This is a bit buggy
+
         ],
         {
           components: components(),
