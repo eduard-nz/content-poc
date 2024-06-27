@@ -45,21 +45,21 @@ export const plugins = [
   createItalicPlugin(),
   createUnderlinePlugin(),
   // createCodePlugin(),
-  // createListPlugin(),
-  createIndentPlugin({
-    inject: {
-      props: {
-        validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
-      },
-    },
-  }),
-  createIndentListPlugin({
-    inject: {
-      props: {
-        validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
-      },
-    },
-  }),
+  createListPlugin(),
+  // createIndentPlugin({
+  //   inject: {
+  //     props: {
+  //       validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
+  //     },
+  //   },
+  // }),
+  // createIndentListPlugin({
+  //   inject: {
+  //     props: {
+  //       validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1],
+  //     },
+  //   },
+  // }),
   createHorizontalRulePlugin(),
   // Allows us to do things like copy/paste, remembering the state of the element (like mdx)
   createNodeIdPlugin(),

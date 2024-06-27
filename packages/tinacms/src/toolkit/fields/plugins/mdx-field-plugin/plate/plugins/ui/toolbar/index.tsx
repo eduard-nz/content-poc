@@ -147,7 +147,8 @@ export function Toolbar({
       onMouseDown: (e) => {
         e.preventDefault()
         e.stopPropagation()
-        toggleIndentList(editor, {listStyleType: ELEMENT_UL })
+        // toggleIndentList(editor, {listStyleType: ELEMENT_UL })
+        toggleList(editor, {type: ELEMENT_UL })
       },
     },
     {
@@ -158,7 +159,8 @@ export function Toolbar({
       onMouseDown: (e) => {
         e.preventDefault()
         e.stopPropagation()
-        toggleIndentList(editor, { listStyleType: ELEMENT_OL })
+        // toggleIndentList(editor, { listStyleType: ELEMENT_OL })
+        toggleList(editor, { type: ELEMENT_OL })
       },
     },
     {
