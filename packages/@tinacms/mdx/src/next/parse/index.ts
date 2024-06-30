@@ -3,13 +3,14 @@ import { compact } from 'mdast-util-compact'
 import { postProcessor } from './post-processing'
 import type { Root } from 'mdast'
 import type { RichTextField } from '@tinacms/schema-tools'
+import { RootElement } from '../../parse/plate'
 
 export const parseMDX = (
   value: string,
   field: RichTextField,
   imageCallback?: (s: string) => string
 ) => {
-  return JSON.parse(value);
+  return value as unknown as RootElement;
   const backup = (v: string) => v
   const callback = imageCallback || backup
   const tree = fromMarkdown(value, field)

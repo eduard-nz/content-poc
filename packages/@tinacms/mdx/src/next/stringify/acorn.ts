@@ -214,7 +214,8 @@ export function stringifyProps(
             })
             return
           } else {
-            const stringValue = stringifyMDX(value, field, imageCallback)
+            const stringValue = JSON.stringify(stringifyMDX(value, field, imageCallback))
+            // const stringValue = stringifyMDX(value, field, imageCallback)
             if (stringValue) {
               val = stringValue
                 .trim()

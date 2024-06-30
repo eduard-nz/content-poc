@@ -88,6 +88,7 @@ const resolveFieldData = async (
       break
     case 'rich-text':
       // @ts-ignore value is unknown
+      // console.log(`resolving ${JSON.stringify(field)}: ${JSON.stringify(value)}`);
       const tree = parseMDX(value, field, (value) =>
         resolveMediaRelativeToCloud(value, config, tinaSchema.schema)
       )
